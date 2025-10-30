@@ -1,9 +1,11 @@
 import 'dart:ui';
+import 'package:batoorrider/view/dashboard/chat.dart';
 import 'package:batoorrider/view/dashboard/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../constants/appColors.dart';
 import '../controller/dashboardController.dart';
+import 'dashboard/profile.dart';
 // import 'package:batoor/controller/homeController.dart';
 // import 'DashboardComponents/homeHomeTab.dart';
 // import 'MenuBar/helpFeedback.dart';
@@ -20,22 +22,30 @@ class Dashboard extends StatelessWidget {
     final List<IconData> icons = [
       Icons.home_rounded,
       Icons.chat_bubble_outline_rounded,
-      Icons.favorite_border_rounded,
-      Icons.notifications_none_rounded,
+      // Icons.favorite_border_rounded,
+      // Icons.notifications_none_rounded,
       Icons.person_outline_rounded,
     ];
 
     final List<String> labels = [
       "Home",
       "Chat",
-      "Favourite",
-      "Notifications",
+      // "Favourite",
+      // "Notifications",
       "Profile"
     ];
 
     final List<Widget> screens = [
       HomeDashboard(),
-      Text("data"),
+      ChatScreen(),
+      EmployeeProfileScreen(),
+      // HomeDashboard(),
+
+      // HomeDashboard(),
+      // HomeDashboard(),
+      // HomeDashboard(),
+
+      // Text("data"),
       // Homehometab(),
       // Homehometab(),
       // HomeFavouriteTab(),
